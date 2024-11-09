@@ -39,7 +39,5 @@ public class UIManager : MonoBehaviour,IManager
     /// <summary>
     /// 씬에 기본 UI깔아주는 함수
     /// </summary>
-    public void 
-
-
+    
 }
