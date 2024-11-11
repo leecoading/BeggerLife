@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro.EditorUtilities;
+using UnityEditor.Build.Content;
 using UnityEngine;
 
 public sealed class Managers : MonoBehaviour
@@ -10,10 +11,12 @@ public sealed class Managers : MonoBehaviour
 
     //생성된 Manager들 리턴값
     public static UIManager UIManager { get { return instance.uiManager; } }
+    public static GameManager GameManager { get { return instance.gameManager; } }
+
 
     //생성된 Manager들 인스턴스
     private UIManager uiManager;
-
+    private GameManager gameManager;
 
 
 
