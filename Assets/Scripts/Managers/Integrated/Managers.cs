@@ -12,10 +12,12 @@ public sealed class Managers : MonoBehaviour
     //생성된 Manager들 리턴값
     public static UIManager UIManager { get { return instance.uiManager; } }
     public static GameManager GameManager { get { return instance.gameManager; } }
+    public static SoundManager Sound { get { return instance.soundManager; } }
 
 
     //생성된 Manager들 인스턴스
     private UIManager uiManager;
+    private SoundManager soundManager;
     private GameManager gameManager;
 
 
@@ -32,6 +34,8 @@ public sealed class Managers : MonoBehaviour
         DontDestroyOnLoad(gameObject);
 
         instance.uiManager = CreateManager<UIManager>(gameObject.transform);
+        instance.soundManager = CreateManager<SoundManager>(gameObject.transform);
+        instance.gameManager = CreateManager<GameManager>(gameObject.transform);
     }
 
 
