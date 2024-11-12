@@ -4,6 +4,10 @@ using UnityEngine;
 
 public enum SceneType
 {
-    TitleScene,
-    InGameScene
+    SeoulScene,
+    EarthScene,
+    SloarSystemScene,
+    GalaxyScene,
+    SpaceScene,
+    MultiverseScene
 }

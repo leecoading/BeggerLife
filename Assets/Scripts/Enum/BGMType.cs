@@ -6,5 +6,10 @@ using UnityEngine;
 /// </summary>
 public enum BGMType
 {
-
+    Seoul,
+    Earth,
+    SloarSystem,
+    Galaxy,
+    Space,
+    Multiverse
 }

@@ -2225,6 +2225,7 @@ GameObject:
   - component: {fileID: 5596600333445728041}
   - component: {fileID: 2816953275379655637}
   - component: {fileID: 3038851843465417989}
+  - component: {fileID: 6433390710705353215}
   m_Layer: 5
   m_Name: UpgradePopup
   m_TagString: Untagged
@@ -2316,6 +2317,18 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &6433390710705353215
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4073448737715479318}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de0e36d309a8a0e4bb0223291f98666e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4256135699727030951
 GameObject:
   m_ObjectHideFlags: 0
@@ -2436,7 +2449,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 4987069082163589779}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 6433390710705353215}
+        m_TargetAssemblyTypeName: BasePopup, Assembly-CSharp
+        m_MethodName: Close
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &4441200719004971991
 GameObject:
   m_ObjectHideFlags: 0

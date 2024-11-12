@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 1153139190}
   - component: {fileID: 1153139189}
   m_Layer: 0
-  m_Name: "\uC11C\uC6B8"
+  m_Name: Seoul
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

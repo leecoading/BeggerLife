@@ -6,6 +6,19 @@ using UnityEngine;
 /// </summary>
 public enum UIType
 {
-    
+    AssetsPopup1,
+    AssetsPopup2,
+
+    BuyFaildPopup,
+    BuyPopup,
+    BuySuccessPopup,
+
+    GamblePopup,
+    HirePopup,
+    MenuPopup,
+    SettingPopup,
+    UpgradePopup,
+
+    SavePopup
 }
 
