@@ -15,6 +15,8 @@ public enum UIType
     BuySuccessPopup,
 
     GamblePopup,
+    TryFaildPopup,
+    TrySucessedPopup,
     HirePopup,
     MenuPopup,
     SettingPopup,

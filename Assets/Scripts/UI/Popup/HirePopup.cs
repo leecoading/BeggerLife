@@ -19,6 +19,7 @@ public class HirePopup : BasePopup
 
     public void OnClickBegger2()
     {
+        Managers.SoundManager.PlaySFX(SFXType.ButtonSound);
         if (Managers.GameManager.currentMoney >= 1000000000 && !begger2Soldout.activeSelf)
         {
             Managers.GameManager.moneyPerSec = Mathf.RoundToInt(Managers.GameManager.moneyPerSec * 1.3f);
@@ -38,6 +39,7 @@ public class HirePopup : BasePopup
 
     public void OnClickBegger3()
     {
+        Managers.SoundManager.PlaySFX(SFXType.ButtonSound);
         if (Managers.GameManager.currentMoney >= 100000000000 && !begger3Soldout.activeSelf)
         {
             Managers.GameManager.moneyPerSec = Mathf.RoundToInt(Managers.GameManager.moneyPerSec * 1.4f);
@@ -57,6 +59,7 @@ public class HirePopup : BasePopup
 
     public void OnClickBegger4()
     {
+        Managers.SoundManager.PlaySFX(SFXType.ButtonSound);
         if (Managers.GameManager.currentMoney >= 25000000000000 && !begger4Soldout.activeSelf)
         {
             Managers.GameManager.moneyPerSec = Mathf.RoundToInt(Managers.GameManager.moneyPerSec * 1.5f);
@@ -76,6 +79,7 @@ public class HirePopup : BasePopup
 
     public void OnClickBegger5()
     {
+        Managers.SoundManager.PlaySFX(SFXType.ButtonSound);
         if (Managers.GameManager.currentMoney >= 10000000000000000 && !begger5Soldout.activeSelf)
         {
             Managers.GameManager.moneyPerSec = Mathf.RoundToInt(Managers.GameManager.moneyPerSec * 1.7f);
@@ -95,6 +99,7 @@ public class HirePopup : BasePopup
 
     public void OnClickBegger6()
     {
+        Managers.SoundManager.PlaySFX(SFXType.ButtonSound);
         if (Managers.GameManager.currentMoney >= 10000000000000000000 && !begger6Soldout.activeSelf)
         {
             Managers.GameManager.moneyPerSec = Mathf.RoundToInt(Managers.GameManager.moneyPerSec * 2f);
