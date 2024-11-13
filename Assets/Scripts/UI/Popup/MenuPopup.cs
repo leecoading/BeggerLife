@@ -5,6 +5,11 @@ using UnityEngine;
 
 public class MenuPopup : BasePopup
 {
+    public GameObject Begger2;
+    public GameObject Begger3;
+    public GameObject Begger4;
+    public GameObject Begger5;
+    public GameObject Begger6;
     // Money UI의 TextMeshProUGUI를 GameManager에서 업데이트할 수 있도록 공개
     public TextMeshProUGUI currentMoney;
     public TextMeshProUGUI clickPerMoney;

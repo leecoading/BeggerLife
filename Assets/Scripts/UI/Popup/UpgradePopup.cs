@@ -30,8 +30,8 @@ public class UpgradePopup : BasePopup
         clickPerMoney.text = Managers.GameManager.clickPerMoney.ToString();
         moneyPerSec.text = Managers.GameManager.moneyPerSec.ToString();
 
-        clickUpgradeLevel.text = clickCurrentLevel.ToString();
-        secUpgradeLevel.text = secCurrentLevel.ToString();
+        clickUpgradeLevel.text = Managers.GameManager.clickUpgradeLevel.ToString();
+        secUpgradeLevel.text = Managers.GameManager.secUpgradeLevel.ToString();
 
     }
 
@@ -44,9 +44,7 @@ public class UpgradePopup : BasePopup
             Managers.GameManager.moneyPerSec += Managers.GameManager.upgradeIncresement;
             Managers.GameManager.currentMoney -= Managers.GameManager.secUpgradeCost;
 
-            int secCurrentLevel = int.Parse(secUpgradeLevel.text); // 현재 텍스트를 int로 변환
-            secCurrentLevel += 1;
-            secUpgradeLevel.text = secCurrentLevel.ToString(); // 다시 텍스트로 변환하여 설정
+            Managers.GameManager.secUpgradeLevel++;
 
             Managers.GameManager.secUpgradeCost = Mathf.RoundToInt(Managers.GameManager.secUpgradeCost * 1.1f);
 
@@ -67,9 +65,7 @@ public class UpgradePopup : BasePopup
             Managers.GameManager.clickPerMoney += Managers.GameManager.upgradeIncresement;
             Managers.GameManager.currentMoney -= Managers.GameManager.clickUpgradeCost;
 
-            int clickCurrentLevel = int.Parse(clickUpgradeLevel.text); // 현재 텍스트를 int로 변환
-            clickCurrentLevel += 1;
-            clickUpgradeLevel.text = clickCurrentLevel.ToString(); // 다시 텍스트로 변환하여 설정
+            Managers.GameManager.clickUpgradeLevel++;
 
 
             Managers.GameManager.clickUpgradeCost = Mathf.RoundToInt(Managers.GameManager.secUpgradeCost * 1.1f);

@@ -2,17 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AssetsPopup : MonoBehaviour
+public class AssetsPopup : BasePopup
 {
-    // Start is called before the first frame update
-    void Start()
+    public void OnClickNextBtn()
     {
-        
+        Managers.SoundManager.PlaySFX(SFXType.ButtonSound);
+        Managers.UIManager.CreateUI(UIType.AssetsPopup2, false);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

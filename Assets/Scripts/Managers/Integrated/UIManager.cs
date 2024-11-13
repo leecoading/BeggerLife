@@ -57,9 +57,32 @@ public class UIManager : MonoBehaviour,IManager
 
 
 
-    public BasePopup CreateUI(Enum type, bool curPopupActive = true)
+    //public BasePopup CreateUI(Enum type, bool curPopupActive = true)
+    //{
+    //    if (!UIStorge.TryGetValue(type, out GameObject prefab))
+    //    {
+    //        Debug.LogWarning($"This is not Scene Base UI : {type}");
+    //        return null;
+    //    }
+
+    //    GameObject clone = Instantiate(prefab);
+
+    //    if(PopupStorge.TryPeek(out BasePopup beforeUI) && curPopupActive)
+    //    {
+    //        beforeUI.gameObject.SetActive(false);
+    //    }
+
+    //    BasePopup afterUI = clone.GetComponent<BasePopup>();
+    //    afterUI.Init();
+
+    //    PopupStorge.Push(afterUI);
+
+    //    return afterUI;
+    //}
+
+    public BasePopup CreateUI(Enum type, bool curPopupActive = true, bool addToStack = true)
     {
-        if(!UIStorge.TryGetValue(type, out GameObject prefab))
+        if (!UIStorge.TryGetValue(type, out GameObject prefab))
         {
             Debug.LogWarning($"This is not Scene Base UI : {type}");
             return null;
@@ -67,7 +90,8 @@ public class UIManager : MonoBehaviour,IManager
 
         GameObject clone = Instantiate(prefab);
 
-        if(PopupStorge.TryPeek(out BasePopup beforeUI) && curPopupActive)
+        // 현재 스택 최상위 팝업을 비활성화
+        if (PopupStorge.TryPeek(out BasePopup beforeUI) && curPopupActive)
         {
             beforeUI.gameObject.SetActive(false);
         }
@@ -75,7 +99,11 @@ public class UIManager : MonoBehaviour,IManager
         BasePopup afterUI = clone.GetComponent<BasePopup>();
         afterUI.Init();
 
-        PopupStorge.Push(afterUI);
+        // 팝업을 스택에 추가할지 여부를 확인
+        if (addToStack)
+        {
+            PopupStorge.Push(afterUI);
+        }
 
         return afterUI;
     }
@@ -85,14 +113,14 @@ public class UIManager : MonoBehaviour,IManager
 
     public void CloseUI(Action LoadScene = null)
     {
-        if(LoadScene != null)
+        if (LoadScene != null)
         {
             PopupStorge.Clear();
             LoadScene();
             return;
         }
 
-        if(PopupStorge.Count == 1)
+        if (PopupStorge.Count == 1)
         {
             return;
         }
@@ -104,4 +132,5 @@ public class UIManager : MonoBehaviour,IManager
             baseUI.gameObject.SetActive(true);
         }
     }
+
 }

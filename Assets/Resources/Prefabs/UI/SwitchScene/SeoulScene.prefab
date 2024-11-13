@@ -254,7 +254,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 3512655509749831394}
         m_TargetAssemblyTypeName: MenuPopup, Assembly-CSharp
         m_MethodName: OnClickSettingBtn
         m_Mode: 1
@@ -870,8 +870,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -65, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: -60, y: 0}
+  m_SizeDelta: {x: 80, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5577784983088876096
 CanvasRenderer:
@@ -901,7 +901,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 5076fe5d218ed1642990150511da5499, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6feb009c7695b2b40aaaa8b8957253e1, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1554,6 +1554,7 @@ RectTransform:
   m_Children:
   - {fileID: 1549431883204074535}
   - {fileID: 627090401490365667}
+  - {fileID: 8952624576535383577}
   m_Father: {fileID: 7773802979657359005}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
@@ -2761,7 +2762,7 @@ GameObject:
   - component: {fileID: 3512655509749831394}
   m_Layer: 5
   m_Name: SeoulScene
-  m_TagString: Untagged
+  m_TagString: MenuPopup
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2781,7 +2782,6 @@ RectTransform:
   - {fileID: 7103094062448480725}
   - {fileID: 7031995410998354181}
   - {fileID: 4492339662470578338}
-  - {fileID: 8952624576535383577}
   - {fileID: 4059313664537978077}
   - {fileID: 3217443083241160580}
   - {fileID: 4203461967838948969}
@@ -2869,6 +2869,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce69d79737084a74280bb0b086fa42ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Begger2: {fileID: 5419736052979919275}
+  Begger3: {fileID: 8793055378477163647}
+  Begger4: {fileID: 500213564845283953}
+  Begger5: {fileID: 7293164228800663563}
+  Begger6: {fileID: 9064485037526242082}
   currentMoney: {fileID: 6615111038953648927}
   clickPerMoney: {fileID: 168693588256205969}
   moneyPerSec: {fileID: 7364322221446559115}
@@ -3353,17 +3358,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5732447965218242610}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5156137856558226701}
-  m_Father: {fileID: 7773802979657359005}
+  m_Father: {fileID: 4492339662470578338}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 1.9854999}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -240, y: -140}
+  m_AnchoredPosition: {x: -60, y: -745}
   m_SizeDelta: {x: 150, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2991935761671669675

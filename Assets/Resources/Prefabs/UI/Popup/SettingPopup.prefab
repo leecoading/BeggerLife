@@ -404,7 +404,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 8201808817918994447}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 44445054127778742}
+        m_TargetAssemblyTypeName: SettingPopup, Assembly-CSharp
+        m_MethodName: OnClickExitBtn
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &2238257853943716383
 GameObject:
   m_ObjectHideFlags: 0
@@ -441,7 +453,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 153}
   m_SizeDelta: {x: 500, y: 800}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &329208622898654224
@@ -835,6 +847,7 @@ GameObject:
   - component: {fileID: 8265065699447575615}
   - component: {fileID: 1498792556269987307}
   - component: {fileID: 9073019095666840101}
+  - component: {fileID: 44445054127778742}
   m_Layer: 5
   m_Name: SettingPopup
   m_TagString: Untagged
@@ -926,6 +939,18 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &44445054127778742
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3943082948939851983}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97b51c083b8536e48a64674bb5c85cab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4254453948431405524
 GameObject:
   m_ObjectHideFlags: 0
@@ -2276,7 +2301,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 709898134581089683}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 44445054127778742}
+        m_TargetAssemblyTypeName: BasePopup, Assembly-CSharp
+        m_MethodName: Close
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &9213692243808577343
 GameObject:
   m_ObjectHideFlags: 0
