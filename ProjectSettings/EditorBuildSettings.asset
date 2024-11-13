@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SeoulScene.unity
+    path: Assets/Scenes/InGameScene.unity
     guid: 3bfc792105d1fad4aa9aecde705d0600
   - enabled: 1
     path: Assets/Scenes/EarthScene.unity

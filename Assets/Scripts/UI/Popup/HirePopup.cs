@@ -99,7 +99,7 @@ public class HirePopup : BasePopup
 
     public void OnClickBegger6()
     {
-        Managers.SoundManager.PlaySFX(SFXType.ButtonSound);
+
         if (Managers.GameManager.currentMoney >= 10000000000000000000 && !begger6Soldout.activeSelf)
         {
             Managers.GameManager.moneyPerSec = Mathf.RoundToInt(Managers.GameManager.moneyPerSec * 2f);

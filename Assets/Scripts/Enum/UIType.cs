@@ -23,6 +23,8 @@ public enum UIType
     UpgradePopup,
 
     SavePopup,
-    CoinPopup
+    CoinPopup,
+
+    ClearPopup
 }
 
