@@ -15,7 +15,7 @@ public class GameManager : MonoBehaviour,IManager
     public int clickUpgradeLevel = 0; //현재 클릭 당 증가할 돈 강화 레벨(횟수)
     public int secUpgradeLevel = 0; //현재 초당 증가할 돈 강화 레벨(횟수)
 
-    private const int upgradeIncresement = 10; //강화 당 증가할 초당/클릭당 증가할 돈 비율
+    public int upgradeIncresement = 10; //강화 당 증가할 초당/클릭당 증가할 돈 비율
     private const float costIncreseRate = 1.0f; //초당 증가할 돈 대기시간
 
 
@@ -41,8 +41,7 @@ public class GameManager : MonoBehaviour,IManager
     {
         currentMoney += amount;
 
-        // 를 통해 UI 업데이트
-        Managers.UIManager.UpdateMoneyText(currentMoney);
+        
     }
 
     // 현 상태의 돈을 UI에 업데이트하는 메서드

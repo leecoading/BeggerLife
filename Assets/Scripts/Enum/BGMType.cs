@@ -8,7 +8,7 @@ public enum BGMType
 {
     Seoul,
     Earth,
-    SloarSystem,
+    SolarSystem,
     Galaxy,
     Space,
     Multiverse

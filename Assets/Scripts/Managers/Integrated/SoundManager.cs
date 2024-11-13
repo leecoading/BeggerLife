@@ -70,9 +70,9 @@ public class SoundManager : MonoBehaviour,IManager
                 break;
 
             case "SloarSystemScene":
-                if (bgmSource.clip == null || bgmSource.clip != clip[BGMType.SloarSystem])
+                if (bgmSource.clip == null || bgmSource.clip != clip[BGMType.SolarSystem])
                 {
-                    bgmSource.clip = clip[BGMType.SloarSystem];
+                    bgmSource.clip = clip[BGMType.SolarSystem];
                     bgmSource.Play();
                 }
                 break;

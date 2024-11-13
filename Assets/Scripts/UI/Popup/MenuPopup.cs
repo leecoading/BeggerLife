@@ -6,29 +6,27 @@ using UnityEngine;
 public class MenuPopup : BasePopup
 {
     // Money UI의 TextMeshProUGUI를 GameManager에서 업데이트할 수 있도록 공개
-    public TextMeshProUGUI moneyText;
+    public TextMeshProUGUI currentMoney;
+    public TextMeshProUGUI clickPerMoney;
+    public TextMeshProUGUI moneyPerSec;
     public override void Init()
     {
         base.Init();
     }
 
-    public void Start()
+    public void Update()
     {
-        UpdatecurrentMoney();
+        UpdateMoney();
     }
 
-    private void UpdatecurrentMoney()
+    private void UpdateMoney()
     {
-        moneyText.text = $"{Managers.GameManager.currentMoney}";
+        currentMoney.text = $"{Managers.GameManager.currentMoney}";
+        clickPerMoney.text = $"{Managers.GameManager.clickPerMoney}";
+        moneyPerSec.text = $"{Managers.GameManager.moneyPerSec}";
     }
 
-    public void OnClick()
-    {
-        Managers.GameManager.AddMoney(Managers.GameManager.clickPerMoney);
-        UpdatecurrentMoney();
-    }
-
-
+    
 
 
 

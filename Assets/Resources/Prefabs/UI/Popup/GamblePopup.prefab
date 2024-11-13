@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2937786657727219177}
   - component: {fileID: 756975694709688767}
   - component: {fileID: 4244798422456655573}
+  - component: {fileID: 728574678422284528}
   m_Layer: 5
   m_Name: GamblePopup
   m_TagString: Untagged
@@ -31,9 +32,9 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 8974358688918886066}
   - {fileID: 1287495801432777220}
   - {fileID: 7213260901853934394}
-  - {fileID: 8974358688918886066}
   - {fileID: 2187886525478220930}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -77,10 +78,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 760, y: 1280}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -105,6 +106,18 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &728574678422284528
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 505886917766502718}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe3e2203c6538b0468882a959cd5ab38, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &901823614097336281
 GameObject:
   m_ObjectHideFlags: 0
@@ -1432,7 +1445,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 4418223879756760633}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 728574678422284528}
+        m_TargetAssemblyTypeName: BasePopup, Assembly-CSharp
+        m_MethodName: Close
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &4536685745625333615
 GameObject:
   m_ObjectHideFlags: 0
