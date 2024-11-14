@@ -93,8 +93,8 @@ public class SoundManager : MonoBehaviour,IManager
                 }
                 break;
 
-            case "MultiverseScene":
-                if (bgmSource.clip == null || bgmSource.clip != clip[BGMType.Multiverse])
+            case "MultiVerseScene":
+                if (bgmSource.clip == null || bgmSource.clip != clip[BGMType.Multiverse]) 
                 {
                     bgmSource.clip = clip[BGMType.Multiverse];
                     bgmSource.Play();

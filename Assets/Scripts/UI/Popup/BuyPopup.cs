@@ -32,8 +32,7 @@ public class BuyPopup : BasePopup
             Managers.GameManager.currentMoney -= 5000000000;
 
             earthSoldout.SetActive(true);
-            //menuPopup.seoul.SetActive(false);
-            //menuPopup.earth.SetActive(true);
+            SceneLoadManager.LoadScene(SceneType.EarthScene);
         }
 
         else
@@ -45,13 +44,14 @@ public class BuyPopup : BasePopup
     public void OnClickSolarSystemBtn()
     {
         Managers.SoundManager.PlaySFX(SFXType.ButtonSound);
-        if (Managers.GameManager.currentMoney >= 1000000000000 && !earthSoldout.activeSelf)
+        if (Managers.GameManager.currentMoney >= 1000000000000 && !solarSystemSoldout.activeSelf)
         {
             Managers.GameManager.moneyPerSec = Mathf.RoundToInt(Managers.GameManager.moneyPerSec += 1000000000);
             Managers.GameManager.clickPerMoney = Mathf.RoundToInt(Managers.GameManager.clickPerMoney += 1000000000);
             Managers.GameManager.currentMoney -= 1000000000000;
 
             solarSystemSoldout.SetActive(true);
+            SceneLoadManager.LoadScene(SceneType.SolarSystemScene);
 
         }
 
@@ -64,13 +64,14 @@ public class BuyPopup : BasePopup
     public void OnClickGalaxyBtn()
     {
         Managers.SoundManager.PlaySFX(SFXType.ButtonSound);
-        if (Managers.GameManager.currentMoney >= 250000000000000 && !earthSoldout.activeSelf)
+        if (Managers.GameManager.currentMoney >= 250000000000000 && !galaxySoldout.activeSelf)
         {
             Managers.GameManager.moneyPerSec = Mathf.RoundToInt(Managers.GameManager.moneyPerSec += 100000000000);
             Managers.GameManager.clickPerMoney = Mathf.RoundToInt(Managers.GameManager.clickPerMoney += 100000000000);
             Managers.GameManager.currentMoney -= 250000000000000;
 
             galaxySoldout.SetActive(true);
+            SceneLoadManager.LoadScene(SceneType.GalaxyScene);
 
         }
 
@@ -83,13 +84,14 @@ public class BuyPopup : BasePopup
     public void OnClickSpaceBtn()
     {
         Managers.SoundManager.PlaySFX(SFXType.ButtonSound);
-        if (Managers.GameManager.currentMoney >= 100000000000000000 && !earthSoldout.activeSelf)
+        if (Managers.GameManager.currentMoney >= 100000000000000000 && !spaceSoldout.activeSelf)
         {
             Managers.GameManager.moneyPerSec = Mathf.RoundToInt(Managers.GameManager.moneyPerSec += 5000000000000);
             Managers.GameManager.clickPerMoney = Mathf.RoundToInt(Managers.GameManager.clickPerMoney += 5000000000000);
             Managers.GameManager.currentMoney -= 100000000000000000;
 
             spaceSoldout.SetActive(true);
+            SceneLoadManager.LoadScene(SceneType.SpaceScene);
 
         }
 
@@ -102,15 +104,16 @@ public class BuyPopup : BasePopup
     public void OnClickMultiVerseBtn()
     {
         Managers.SoundManager.PlaySFX(SFXType.ButtonSound);
-        if (Managers.GameManager.currentMoney >= 9000000000000000000 && !earthSoldout.activeSelf)
+        if (Managers.GameManager.currentMoney >= 9000000000000000000 && !multiVerseSoldout.activeSelf)
         {
             Managers.GameManager.moneyPerSec = Mathf.RoundToInt(Managers.GameManager.moneyPerSec += 90000000000000);
             Managers.GameManager.clickPerMoney = Mathf.RoundToInt(Managers.GameManager.clickPerMoney += 90000000000000);
             Managers.GameManager.currentMoney -= 9000000000000000000;
 
             multiVerseSoldout.SetActive(true);
-
+            SceneLoadManager.LoadScene(SceneType.MultiverseScene);
             Managers.UIManager.CreateUI(UIType.ClearPopup, false);
+            
         }
 
         else

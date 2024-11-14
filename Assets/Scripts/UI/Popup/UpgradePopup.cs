@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using System.Numerics;
 public class UpgradePopup : BasePopup
 {
     int secCurrentLevel = 0;
@@ -39,11 +40,10 @@ public class UpgradePopup : BasePopup
     {
         Managers.SoundManager.PlaySFX(SFXType.ButtonSound);
 
-        if (Managers.GameManager.currentMoney >= Managers.GameManager.secUpgradeCost)
+        if (Managers.GameManager.currentMoney.CompareTo(Managers.GameManager.secUpgradeCost) >= 0)
         {
             Managers.GameManager.moneyPerSec += Managers.GameManager.upgradeIncresement;
-            Managers.GameManager.currentMoney -= Managers.GameManager.secUpgradeCost;
-
+            Managers.GameManager.currentMoney = Managers.GameManager.currentMoney -= new BigInteger(Managers.GameManager.secUpgradeCost);
             Managers.GameManager.secUpgradeLevel++;
 
             Managers.GameManager.secUpgradeCost = Mathf.RoundToInt(Managers.GameManager.secUpgradeCost * 1.1f);
@@ -60,10 +60,10 @@ public class UpgradePopup : BasePopup
     {
         Managers.SoundManager.PlaySFX(SFXType.ButtonSound);
 
-        if (Managers.GameManager.currentMoney >= Managers.GameManager.clickUpgradeCost)
+        if (Managers.GameManager.currentMoney.CompareTo(Managers.GameManager.clickUpgradeCost) >= 0)
         {
             Managers.GameManager.clickPerMoney += Managers.GameManager.upgradeIncresement;
-            Managers.GameManager.currentMoney -= Managers.GameManager.clickUpgradeCost;
+            Managers.GameManager.currentMoney -= new BigInteger(Managers.GameManager.clickUpgradeCost);
 
             Managers.GameManager.clickUpgradeLevel++;
 

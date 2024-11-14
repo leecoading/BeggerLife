@@ -1742,8 +1742,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 0
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: bcc15704d02984043ae44d272f1356a6, type: 2}
+  m_sharedMaterial: {fileID: -7348334607476795330, guid: bcc15704d02984043ae44d272f1356a6, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2953,12 +2953,6 @@ MonoBehaviour:
   currentMoney: {fileID: 6615111038953648927}
   clickPerMoney: {fileID: 168693588256205969}
   moneyPerSec: {fileID: 7364322221446559115}
-  seoul: {fileID: 1117717735240574030}
-  earth: {fileID: 0}
-  solarSyatem: {fileID: 0}
-  galaxy: {fileID: 0}
-  space: {fileID: 0}
-  multiVerse: {fileID: 0}
 --- !u!1 &3954436118619543882
 GameObject:
   m_ObjectHideFlags: 0

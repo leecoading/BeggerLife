@@ -6,7 +6,7 @@ public enum SceneType
 {
     SeoulScene,
     EarthScene,
-    SloarSystemScene,
+    SolarSystemScene,
     GalaxyScene,
     SpaceScene,
     MultiverseScene

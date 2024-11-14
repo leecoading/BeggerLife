@@ -1,12 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.Timeline.Actions;
+using System.Numerics;
 using UnityEngine;
+using TMPro; // TextMeshPro를 사용하려면 이 네임스페이스를 추가
 
-public class GameManager : MonoBehaviour,IManager
+public class GameManager : MonoBehaviour, IManager
 {
-    public float currentMoney = 0; //현재 보유한 돈
-
+    public BigInteger currentMoney = new BigInteger(10000000000000000000); //현재 보유한 돈
     public float clickPerMoney = 1; //클릭 당 증가하게 할 돈 비율
     public float moneyPerSec = 1; // 초당 증가하게 할 돈 비율
 
@@ -16,31 +16,42 @@ public class GameManager : MonoBehaviour,IManager
     public int clickUpgradeLevel = 1; //현재 클릭 당 증가할 돈 강화 레벨(횟수)
     public int secUpgradeLevel = 1; //현재 초당 증가할 돈 강화 레벨(횟수)
 
-    public int upgradeIncresement = 10; //강화 당 증가할 초당/클릭당 증가할 돈 비율
-    private const float costIncreseRate = 1.0f; //초당 증가할 돈 대기시간
-
-
+    public float upgradeIncresement = 10; //강화 당 증가할 초당/클릭당 증가할 돈 비율
 
 
     private void Awake()
     {
-        StartCoroutine(AddMoneyPerSecondCoroutine());// 1초마다 돈 증가 코루틴 시작
+        StartCoroutine(AddMoneyPerSecondCoroutine()); // 1초마다 돈 증가 코루틴 시작
     }
-
-
 
     void Update()
     {
-        // PC의 마우스 클릭 또는 안드로이드의 화면 터치 입력 감지
-
         if (Input.GetMouseButtonDown(0) || Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
         {
             AddClickMoney(clickPerMoney);
         }
+
     }
 
-  
+    // 금액을 '억', '조', '경', '해' 단위로 변환하는 함수
+    public string FormatMoney(BigInteger money)
+    {
+        BigInteger 한억 = BigInteger.Pow(10, 8);
+        BigInteger 일조 = BigInteger.Pow(10, 12);
+        BigInteger 일경 = BigInteger.Pow(10, 16);
+        BigInteger 일해 = BigInteger.Pow(10, 20);
 
+        if (money >= 일해)
+            return (money / 일해).ToString("0.##") + " 해"; // 2자리 소수점까지 표시
+        else if (money >= 일경)
+            return (money / 일경).ToString("0.##") + " 경";
+        else if (money >= 일조)
+            return (money / 일조).ToString("0.##") + " 조";
+        else if (money >= 한억)
+            return (money / 한억).ToString("0.##") + " 억";
+        else
+            return money.ToString("0"); // 소수점 없이 표시
+    }
 
     // 1초마다 자동으로 돈을 추가하는 코루틴
     private IEnumerator AddMoneyPerSecondCoroutine()
@@ -52,23 +63,23 @@ public class GameManager : MonoBehaviour,IManager
         }
     }
 
-    //1초마다 현재 돈에 1원씩 더해주는 함수
+    // 1초마다 현재 돈에 1원씩 더해주는 함수
     public void AddSecondMoney(float amount)
     {
-        currentMoney += amount;
-
+        currentMoney += new BigInteger(amount); // float를 BigInteger로 변환하여 더하기
     }
+
+    // 클릭 시 돈을 추가하는 함수
     void AddClickMoney(float amount)
     {
-        currentMoney += amount;
+        currentMoney += new BigInteger(amount); // float를 BigInteger로 변환하여 더하기
         Managers.SoundManager.PlaySFX(SFXType.ScreenSound);
         Managers.UIManager.CreateUI(UIType.CoinPopup, false, false);
     }
 
-
     public void Init()
     {
-        
+        // 초기화 코드
     }
 }
 

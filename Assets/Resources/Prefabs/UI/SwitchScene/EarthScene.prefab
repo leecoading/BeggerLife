@@ -2836,7 +2836,7 @@ GameObject:
   - component: {fileID: 4778299524446203200}
   - component: {fileID: 3512655509749831394}
   m_Layer: 5
-  m_Name: SeoulScene
+  m_Name: EarthScene
   m_TagString: MenuPopup
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
