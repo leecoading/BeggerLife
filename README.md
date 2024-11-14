@@ -67,19 +67,33 @@ Scene이 변경되어도 파괴되지 않도록 코드를 구현했습니다.
 
 5. 거지자산(프리팹은 구현되었으나 코드상 구현이 미숙)
    >> seoulText.text = Managers.GameManager.FormatMoney((Managers.GameManager.moneyPerSec * new BigInteger(0.1f)));
+   >> 
 earthText.text = Managers.GameManager.FormatMoney((Managers.GameManager.moneyPerSec * new BigInteger(0.2f)));
+
 solarSystemText.text = Managers.GameManager.FormatMoney((Managers.GameManager.moneyPerSec * new BigInteger(0.3f)));
+
    >> 를 통해 현재 초당 증가하는 돈에 일정 배율만큼 Text에 올라가게 할 계획이었으나
+>   > 
    >> MoneyPerSec까지는 정상적으로 입력되었지만 곱하고 나니 0원이 되버려서 이후 구현이 힘들어짐.
+>   > 
    >> 버튼을 클릭 시 돈이 회수가 되게 하는 코드를 작성했는데
+>   > 
    >> 조건문에 SoldOutImage가 activeself일때만 돈을 회수가능하게 했지만 4번의 Scene이 넘어가면서 SoldOutImage가
+>   > 
    >> 초기화 되버리는 현상때문에 회수가 불가해지는 현상 발생.
 
+
+
 미구현 부분
+
+
+
 저장부분
+
 위의 기능을 구현하다가 못했습니다.
 
 설정에 들어가서 사운드 조절 부분
+
 진짜 시간이 부족해서 설정할 시간이 없었습니다.
 
 
