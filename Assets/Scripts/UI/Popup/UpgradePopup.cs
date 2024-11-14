@@ -42,7 +42,7 @@ public class UpgradePopup : BasePopup
 
         if (Managers.GameManager.currentMoney.CompareTo(Managers.GameManager.secUpgradeCost) >= 0)
         {
-            Managers.GameManager.moneyPerSec += Managers.GameManager.upgradeIncresement;
+            Managers.GameManager.moneyPerSec += new BigInteger(Managers.GameManager.upgradeIncresement);
             Managers.GameManager.currentMoney = Managers.GameManager.currentMoney -= new BigInteger(Managers.GameManager.secUpgradeCost);
             Managers.GameManager.secUpgradeLevel++;
 
@@ -62,7 +62,7 @@ public class UpgradePopup : BasePopup
 
         if (Managers.GameManager.currentMoney.CompareTo(Managers.GameManager.clickUpgradeCost) >= 0)
         {
-            Managers.GameManager.clickPerMoney += Managers.GameManager.upgradeIncresement;
+            Managers.GameManager.clickPerMoney += new BigInteger(Managers.GameManager.upgradeIncresement);
             Managers.GameManager.currentMoney -= new BigInteger(Managers.GameManager.clickUpgradeCost);
 
             Managers.GameManager.clickUpgradeLevel++;

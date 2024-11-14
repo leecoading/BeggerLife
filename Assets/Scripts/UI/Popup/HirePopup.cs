@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Numerics;
 using UnityEngine;
 
 public class HirePopup : BasePopup
@@ -22,8 +23,8 @@ public class HirePopup : BasePopup
         Managers.SoundManager.PlaySFX(SFXType.ButtonSound);
         if (Managers.GameManager.currentMoney >= 1000000000 && !begger2Soldout.activeSelf)
         {
-            Managers.GameManager.moneyPerSec = Mathf.RoundToInt(Managers.GameManager.moneyPerSec * 1.3f);
-            Managers.GameManager.clickPerMoney = Mathf.RoundToInt(Managers.GameManager.clickPerMoney * 1.3f);
+            Managers.GameManager.moneyPerSec += new BigInteger((float)Managers.GameManager.moneyPerSec * 1.3f);
+            Managers.GameManager.clickPerMoney += new BigInteger((float)Managers.GameManager.clickPerMoney * 1.3f);
             Managers.GameManager.currentMoney -= 1000000000;
 
             begger2Soldout.SetActive(true);
@@ -42,8 +43,8 @@ public class HirePopup : BasePopup
         Managers.SoundManager.PlaySFX(SFXType.ButtonSound);
         if (Managers.GameManager.currentMoney >= 100000000000 && !begger3Soldout.activeSelf)
         {
-            Managers.GameManager.moneyPerSec = Mathf.RoundToInt(Managers.GameManager.moneyPerSec * 1.4f);
-            Managers.GameManager.clickPerMoney = Mathf.RoundToInt(Managers.GameManager.clickPerMoney * 1.4f);
+            Managers.GameManager.moneyPerSec += new BigInteger((float)Managers.GameManager.moneyPerSec * 1.4f);
+            Managers.GameManager.clickPerMoney += new BigInteger((float)Managers.GameManager.clickPerMoney * 1.4f);
             Managers.GameManager.currentMoney -= 100000000000;
 
             begger3Soldout.SetActive(true);
@@ -62,8 +63,8 @@ public class HirePopup : BasePopup
         Managers.SoundManager.PlaySFX(SFXType.ButtonSound);
         if (Managers.GameManager.currentMoney >= 25000000000000 && !begger4Soldout.activeSelf)
         {
-            Managers.GameManager.moneyPerSec = Mathf.RoundToInt(Managers.GameManager.moneyPerSec * 1.5f);
-            Managers.GameManager.clickPerMoney = Mathf.RoundToInt(Managers.GameManager.clickPerMoney * 1.5f);
+            Managers.GameManager.moneyPerSec += new BigInteger((float)Managers.GameManager.moneyPerSec * 1.5f);
+            Managers.GameManager.clickPerMoney += new BigInteger((float)Managers.GameManager.clickPerMoney * 1.5f);
             Managers.GameManager.currentMoney -= 25000000000000;
 
             begger4Soldout.SetActive(true);
@@ -82,8 +83,8 @@ public class HirePopup : BasePopup
         Managers.SoundManager.PlaySFX(SFXType.ButtonSound);
         if (Managers.GameManager.currentMoney >= 10000000000000000 && !begger5Soldout.activeSelf)
         {
-            Managers.GameManager.moneyPerSec = Mathf.RoundToInt(Managers.GameManager.moneyPerSec * 1.7f);
-            Managers.GameManager.clickPerMoney = Mathf.RoundToInt(Managers.GameManager.clickPerMoney * 1.7f);
+            Managers.GameManager.moneyPerSec += new BigInteger((float)Managers.GameManager.moneyPerSec * 1.7f);
+            Managers.GameManager.clickPerMoney += new BigInteger((float)Managers.GameManager.clickPerMoney * 1.7f);
             Managers.GameManager.currentMoney -= 10000000000000000;
 
             begger5Soldout.SetActive(true);
@@ -102,8 +103,8 @@ public class HirePopup : BasePopup
 
         if (Managers.GameManager.currentMoney >= 10000000000000000000 && !begger6Soldout.activeSelf)
         {
-            Managers.GameManager.moneyPerSec = Mathf.RoundToInt(Managers.GameManager.moneyPerSec * 2f);
-            Managers.GameManager.clickPerMoney = Mathf.RoundToInt(Managers.GameManager.clickPerMoney * 2f);
+            Managers.GameManager.moneyPerSec += new BigInteger((float)Managers.GameManager.moneyPerSec * 2f);
+            Managers.GameManager.clickPerMoney += new BigInteger((float)Managers.GameManager.clickPerMoney * 2f);
             Managers.GameManager.currentMoney -= 10000000000000000000;
 
             begger6Soldout.SetActive(true);

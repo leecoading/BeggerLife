@@ -69,7 +69,7 @@ public class SoundManager : MonoBehaviour,IManager
                 }
                 break;
 
-            case "SloarSystemScene":
+            case "SolarSystemScene":
                 if (bgmSource.clip == null || bgmSource.clip != clip[BGMType.SolarSystem])
                 {
                     bgmSource.clip = clip[BGMType.SolarSystem];

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Numerics;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -27,8 +28,8 @@ public class BuyPopup : BasePopup
         Managers.SoundManager.PlaySFX(SFXType.ButtonSound);
         if (Managers.GameManager.currentMoney >= 5000000000 && !earthSoldout.activeSelf)
         {
-            Managers.GameManager.moneyPerSec = Mathf.RoundToInt(Managers.GameManager.moneyPerSec += 10000000);
-            Managers.GameManager.clickPerMoney = Mathf.RoundToInt(Managers.GameManager.clickPerMoney += 10000000);
+            Managers.GameManager.moneyPerSec += new BigInteger(10000000); // 초당 증가할 돈 증가
+            Managers.GameManager.clickPerMoney += new BigInteger(10000000); // 클릭당 증가할 돈 증가
             Managers.GameManager.currentMoney -= 5000000000;
 
             earthSoldout.SetActive(true);
@@ -46,8 +47,8 @@ public class BuyPopup : BasePopup
         Managers.SoundManager.PlaySFX(SFXType.ButtonSound);
         if (Managers.GameManager.currentMoney >= 1000000000000 && !solarSystemSoldout.activeSelf)
         {
-            Managers.GameManager.moneyPerSec = Mathf.RoundToInt(Managers.GameManager.moneyPerSec += 1000000000);
-            Managers.GameManager.clickPerMoney = Mathf.RoundToInt(Managers.GameManager.clickPerMoney += 1000000000);
+            Managers.GameManager.moneyPerSec += new BigInteger(1000000000); // 초당 증가할 돈 증가
+            Managers.GameManager.clickPerMoney += new BigInteger(1000000000); // 클릭당 증가할 돈 증가
             Managers.GameManager.currentMoney -= 1000000000000;
 
             solarSystemSoldout.SetActive(true);
@@ -66,8 +67,8 @@ public class BuyPopup : BasePopup
         Managers.SoundManager.PlaySFX(SFXType.ButtonSound);
         if (Managers.GameManager.currentMoney >= 250000000000000 && !galaxySoldout.activeSelf)
         {
-            Managers.GameManager.moneyPerSec = Mathf.RoundToInt(Managers.GameManager.moneyPerSec += 100000000000);
-            Managers.GameManager.clickPerMoney = Mathf.RoundToInt(Managers.GameManager.clickPerMoney += 100000000000);
+            Managers.GameManager.moneyPerSec += new BigInteger(100000000000); // 초당 증가할 돈 증가
+            Managers.GameManager.clickPerMoney += new BigInteger(100000000000); // 클릭당 증가할 돈 증가
             Managers.GameManager.currentMoney -= 250000000000000;
 
             galaxySoldout.SetActive(true);
@@ -86,8 +87,8 @@ public class BuyPopup : BasePopup
         Managers.SoundManager.PlaySFX(SFXType.ButtonSound);
         if (Managers.GameManager.currentMoney >= 100000000000000000 && !spaceSoldout.activeSelf)
         {
-            Managers.GameManager.moneyPerSec = Mathf.RoundToInt(Managers.GameManager.moneyPerSec += 5000000000000);
-            Managers.GameManager.clickPerMoney = Mathf.RoundToInt(Managers.GameManager.clickPerMoney += 5000000000000);
+            Managers.GameManager.moneyPerSec += new BigInteger(5000000000000); // 초당 증가할 돈 증가
+            Managers.GameManager.clickPerMoney += new BigInteger(5000000000000); // 클릭당 증가할 돈 증가
             Managers.GameManager.currentMoney -= 100000000000000000;
 
             spaceSoldout.SetActive(true);
@@ -106,8 +107,8 @@ public class BuyPopup : BasePopup
         Managers.SoundManager.PlaySFX(SFXType.ButtonSound);
         if (Managers.GameManager.currentMoney >= 9000000000000000000 && !multiVerseSoldout.activeSelf)
         {
-            Managers.GameManager.moneyPerSec = Mathf.RoundToInt(Managers.GameManager.moneyPerSec += 90000000000000);
-            Managers.GameManager.clickPerMoney = Mathf.RoundToInt(Managers.GameManager.clickPerMoney += 90000000000000);
+            Managers.GameManager.moneyPerSec += new BigInteger(90000000000000); // 초당 증가할 돈 증가
+            Managers.GameManager.clickPerMoney += new BigInteger(90000000000000); // 클릭당 증가할 돈 증가
             Managers.GameManager.currentMoney -= 9000000000000000000;
 
             multiVerseSoldout.SetActive(true);

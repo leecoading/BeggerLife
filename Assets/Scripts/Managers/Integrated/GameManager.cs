@@ -7,8 +7,8 @@ using TMPro; // TextMeshPro를 사용하려면 이 네임스페이스를 추가
 public class GameManager : MonoBehaviour, IManager
 {
     public BigInteger currentMoney = new BigInteger(10000000000000000000); //현재 보유한 돈
-    public float clickPerMoney = 1; //클릭 당 증가하게 할 돈 비율
-    public float moneyPerSec = 1; // 초당 증가하게 할 돈 비율
+    public BigInteger clickPerMoney = 10000000000000000; //클릭 당 증가하게 할 돈 비율
+    public BigInteger moneyPerSec = 10000000000000000; // 초당 증가하게 할 돈 비율
 
     public float clickUpgradeCost = 100; //클릭 당 증가할 돈 강화 초기 비용
     public float secUpgradeCost = 100; //초당 증가할 돈 강화 초기 비용
@@ -64,15 +64,15 @@ public class GameManager : MonoBehaviour, IManager
     }
 
     // 1초마다 현재 돈에 1원씩 더해주는 함수
-    public void AddSecondMoney(float amount)
+    public void AddSecondMoney(BigInteger amount)
     {
-        currentMoney += new BigInteger(amount); // float를 BigInteger로 변환하여 더하기
+        currentMoney += amount;
     }
 
     // 클릭 시 돈을 추가하는 함수
-    void AddClickMoney(float amount)
+    void AddClickMoney(BigInteger amount)
     {
-        currentMoney += new BigInteger(amount); // float를 BigInteger로 변환하여 더하기
+        currentMoney += amount;
         Managers.SoundManager.PlaySFX(SFXType.ScreenSound);
         Managers.UIManager.CreateUI(UIType.CoinPopup, false, false);
     }

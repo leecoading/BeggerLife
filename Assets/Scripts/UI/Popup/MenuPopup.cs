@@ -32,8 +32,8 @@ public class MenuPopup : BasePopup
         //currentMoney.text = $"{Managers.GameManager.currentMoney}";
         currentMoney.text = Managers.GameManager.FormatMoney(Managers.GameManager.currentMoney);
 
-        clickPerMoney.text = $"{Managers.GameManager.clickPerMoney}";
-        moneyPerSec.text = $"{Managers.GameManager.moneyPerSec}";
+        clickPerMoney.text = Managers.GameManager.FormatMoney(Managers.GameManager.clickPerMoney);
+        moneyPerSec.text = Managers.GameManager.FormatMoney(Managers.GameManager.moneyPerSec);
     }
 
     

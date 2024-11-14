@@ -15,7 +15,7 @@ public class CoinPopup : BasePopup
 
     private IEnumerator DestroyAfterDelay(float delay)
     {
-        clickPerMoney.text = $"{Managers.GameManager.clickPerMoney}";
+        clickPerMoney.text = Managers.GameManager.FormatMoney(Managers.GameManager.clickPerMoney);
         yield return new WaitForSeconds(delay);
         Destroy(gameObject);
     }

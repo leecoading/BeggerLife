@@ -2780,7 +2780,7 @@ MonoBehaviour:
   seoulEarned: 0
   earthEarned: 0
   solarSystemEarned: 0
-  buyPopup: {fileID: 0}
+  buyPopup: {fileID: 6377635955791268603, guid: 956e5bb2e10727f4391b66a3d3d8cdea, type: 3}
 --- !u!1 &7125521289707168159
 GameObject:
   m_ObjectHideFlags: 0
