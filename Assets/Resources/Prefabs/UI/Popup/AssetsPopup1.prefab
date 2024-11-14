@@ -1205,7 +1205,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 7439113077928229453}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8604666239814901757}
+        m_TargetAssemblyTypeName: AssetsPopup, Assembly-CSharp
+        m_MethodName: OnClickSolarSystemBtn
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &3941454561139867876
 GameObject:
   m_ObjectHideFlags: 0
@@ -1685,7 +1697,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 8586212016056803963}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8604666239814901757}
+        m_TargetAssemblyTypeName: AssetsPopup, Assembly-CSharp
+        m_MethodName: OnClickSeoulBtn
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &4924903350306264790
 GameObject:
   m_ObjectHideFlags: 0
@@ -2169,7 +2193,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 7559852974442673670}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8604666239814901757}
+        m_TargetAssemblyTypeName: AssetsPopup, Assembly-CSharp
+        m_MethodName: OnClickEarthBtn
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &5863997462523262709
 GameObject:
   m_ObjectHideFlags: 0
@@ -2738,6 +2774,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7224a5973b2aab74fa309d5aa312c1df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  seoulText: {fileID: 6504764886599922325}
+  earthText: {fileID: 7614183608333070982}
+  solarSystemText: {fileID: 7271355964025460447}
+  seoulEarned: 0
+  earthEarned: 0
+  solarSystemEarned: 0
+  buyPopup: {fileID: 0}
 --- !u!1 &7125521289707168159
 GameObject:
   m_ObjectHideFlags: 0

@@ -25,6 +25,9 @@ public enum UIType
     SavePopup,
     CoinPopup,
 
+    CollectFaildPopup,
+    CollectSucessPopup,
+
     ClearPopup
 }
 

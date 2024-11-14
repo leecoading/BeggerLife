@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MenuPopup : BasePopup
 {
@@ -10,10 +11,12 @@ public class MenuPopup : BasePopup
     public GameObject Begger4;
     public GameObject Begger5;
     public GameObject Begger6;
-    // Money UI의 TextMeshProUGUI를 GameManager에서 업데이트할 수 있도록 공개
+
     public TextMeshProUGUI currentMoney;
     public TextMeshProUGUI clickPerMoney;
     public TextMeshProUGUI moneyPerSec;
+
+
     public override void Init()
     {
         base.Init();

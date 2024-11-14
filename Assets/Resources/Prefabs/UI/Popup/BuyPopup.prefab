@@ -407,7 +407,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 6685867521756977359}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 6377635955791268603}
+        m_TargetAssemblyTypeName: BuyPopup, Assembly-CSharp
+        m_MethodName: OnClickGalaxyBtn
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &598197334678972198
 GameObject:
   m_ObjectHideFlags: 0
@@ -963,7 +975,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1271401325372254556}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 6377635955791268603}
+        m_TargetAssemblyTypeName: BuyPopup, Assembly-CSharp
+        m_MethodName: OnClickMultiVerseBtn
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &2154453069919286189
 GameObject:
   m_ObjectHideFlags: 0
@@ -1894,7 +1918,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1978032855952391151}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 6377635955791268603}
+        m_TargetAssemblyTypeName: BuyPopup, Assembly-CSharp
+        m_MethodName: OnClickEarthBtn
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &3298529832071745068
 GameObject:
   m_ObjectHideFlags: 0
@@ -3657,7 +3693,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 926629865152562849}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 6377635955791268603}
+        m_TargetAssemblyTypeName: BuyPopup, Assembly-CSharp
+        m_MethodName: OnClickSolarSystemBtn
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &6150386399020949043
 GameObject:
   m_ObjectHideFlags: 0
@@ -4216,7 +4264,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 4117233320438855403}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 6377635955791268603}
+        m_TargetAssemblyTypeName: BuyPopup, Assembly-CSharp
+        m_MethodName: OnClickSpaceBtn
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &6916337134159902368
 GameObject:
   m_ObjectHideFlags: 0
@@ -4714,6 +4774,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a8e0a702848b61489e3bb4cba275b29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  earthSoldout: {fileID: 8188538401403531381}
+  solarSystemSoldout: {fileID: 4418688082913492000}
+  galaxySoldout: {fileID: 6930570199903872758}
+  spaceSoldout: {fileID: 8592209874097849895}
+  multiVerseSoldout: {fileID: 8473404561483725393}
+  menuPopup: {fileID: 3512655509749831394, guid: 09a410efd2bc8c442bbee0291ffcc7a0, type: 3}
+  AssetsPopup: {fileID: 8604666239814901757, guid: 8aed2f8d4f3fe6c48ae883a27abaee34, type: 3}
+  AssetsPopup2: {fileID: 8779128963852265587, guid: ec94dfd46757caa4d86f79d34113a7be, type: 3}
 --- !u!1 &7895516731212966909
 GameObject:
   m_ObjectHideFlags: 0

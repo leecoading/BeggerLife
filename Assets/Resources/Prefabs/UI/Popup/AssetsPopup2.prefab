@@ -1204,7 +1204,7 @@ GameObject:
   - component: {fileID: 4745319886235985241}
   - component: {fileID: 3528357275681344626}
   - component: {fileID: 2229711273113007036}
-  - component: {fileID: 790626742702898596}
+  - component: {fileID: 8779128963852265587}
   m_Layer: 5
   m_Name: AssetsPopup2
   m_TagString: Untagged
@@ -1296,7 +1296,7 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &790626742702898596
+--- !u!114 &8779128963852265587
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1305,9 +1305,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 2644142245600049369}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7224a5973b2aab74fa309d5aa312c1df, type: 3}
+  m_Script: {fileID: 11500000, guid: 53e1536602eeeab43a4975a3ee602d00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  galaxyText: {fileID: 9187533937566230212}
+  spaceText: {fileID: 3028043863033956155}
+  multiVerseText: {fileID: 1353123032755238303}
 --- !u!1 &2891741572512701387
 GameObject:
   m_ObjectHideFlags: 0
@@ -1583,7 +1586,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 790626742702898596}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: BasePopup, Assembly-CSharp
         m_MethodName: Close
         m_Mode: 1
